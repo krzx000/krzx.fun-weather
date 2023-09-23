@@ -1,0 +1,12 @@
+.RightSide .Forecast--Panel--Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.RightSide {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 40%;
+}

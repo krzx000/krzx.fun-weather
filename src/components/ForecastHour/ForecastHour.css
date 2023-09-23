@@ -1,0 +1,48 @@
+.ForecastHour {
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ForecastHour:not(:last-child) {
+  border-right: 2px solid #dfe2e6;
+}
+
+.ForecastHour--Hour,
+.ForecastHour--Icon,
+.ForecastHour--Temperature {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ForecastHour--Hour {
+  color: #959ba3;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ForecastHour--Temperature {
+  color: #000;
+  font-size: 26px;
+  font-weight: 900;
+}
+.ForecastHour--Icon > * {
+  user-select: none;
+}
+.Forecast--Air-Condition--Container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.Forecast--Air-Condition--Container--Item {
+  height: 50%;
+  padding: 15px;
+  border-radius: 10px;
+}

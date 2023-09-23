@@ -1,0 +1,30 @@
+.Actual-Forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Actual-Forecast .Temperature {
+  color: #000;
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.Actual-Forecast--Left {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Actual-Forecast--Right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Actual-Forecast--Right > img {
+  user-select: none;
+  height: 100%;
+}

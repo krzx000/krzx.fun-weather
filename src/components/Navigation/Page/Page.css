@@ -1,0 +1,36 @@
+.Page--Icon {
+  display: flex;
+  justify-content: center;
+}
+.Page--Name {
+  transition: color 0.2s;
+  margin-top: 5px;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  font-weight: 600;
+  color: #737d8a;
+}
+.Page--Name.active {
+  color: #202b3b;
+}
+
+.Page {
+  cursor: pointer;
+}
+
+.Page:first-child {
+  margin-top: 20px;
+}
+
+.Page:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.Page:hover .Page--Name {
+  color: #8b929c;
+}
+
+.Page:hover .Page--Name.active {
+  color: #444d57;
+}

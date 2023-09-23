@@ -1,0 +1,45 @@
+.FutureForecast:not(:last-child) {
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.FutureForecast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FutureForecast--Status {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.FutureForecast--Status--Status {
+  text-align: center;
+  max-width: 150px;
+  margin-left: 20px;
+}
+.FutureForecast--Day {
+  color: #959ba3;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.FutureForecast--Temperature {
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.FutureForecast--Temperature--Day {
+  color: #000;
+}
+.FutureForecast--Temperature--Separator {
+  color: #989da3;
+  font-weight: 500;
+}
+.FutureForecast--Temperature--Night {
+  color: #9ea4ac;
+}

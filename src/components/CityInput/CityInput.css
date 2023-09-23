@@ -1,0 +1,46 @@
+.City-Input {
+  padding: 20px 80px 20px 20px;
+  width: calc(100% - 100px);
+  border: 0;
+  outline: none;
+  border-radius: 15px;
+  background: #eaecef;
+  color: #727478;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.City-Input::placeholder {
+  color: #9ea4ac;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.City-Input--Container {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.City-Input--Button {
+  transition: color 0.2s;
+  cursor: pointer;
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  color: #797d83;
+  font-size: 1rem;
+  padding: 10px 20px 10px 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.City-Input--Button:hover {
+  color: #65696e;
+}
