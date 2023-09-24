@@ -4,8 +4,45 @@
   border: 0;
   outline: none;
   border-radius: 15px;
-  background: #eaecef;
-  color: #727478;
+  background: var(--light-city-input-background-color);
+  color: var(--light-city-input-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 0.5px solid var(--light-city-input-border-color);
+}
+
+.SearchError {
+  border: 0.5px solid var(--light-city-input-border-error-color) !important;
+}
+
+.City-Input::-webkit-input-placeholder {
+  color: var(--light-city-input-placeholder-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.City-Input::-moz-placeholder {
+  color: var(--light-city-input-placeholder-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.City-Input:-ms-input-placeholder {
+  color: var(--light-city-input-placeholder-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.City-Input::-ms-input-placeholder {
+  color: var(--light-city-input-placeholder-color);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -13,7 +50,7 @@
 }
 
 .City-Input::placeholder {
-  color: #9ea4ac;
+  color: var(--light-city-input-placeholder-color);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -26,21 +63,25 @@
 }
 
 .City-Input--Button {
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
   cursor: pointer;
   border: none;
   outline: transparent;
   background-color: transparent;
-  color: #797d83;
+  color: var(--light-city-input-button-color);
   font-size: 1rem;
   padding: 10px 20px 10px 10px;
   font-weight: 700;
   position: absolute;
   top: 50%;
   right: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 
 .City-Input--Button:hover {
-  color: #65696e;
+  color: var(--light-city-input-button-hover-color);
 }

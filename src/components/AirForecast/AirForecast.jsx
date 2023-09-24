@@ -1,4 +1,3 @@
-import "./AirForecast.css";
 import AirCondition from "../AirCondition/AirCondition";
 
 import {
@@ -16,17 +15,13 @@ export default function AirForecast({ weather }) {
           <AirCondition
             icon={faTemperatureHalf}
             name="Temperatura odczuwalna"
-            value={
-              weather.location ? weather.current.feelslike_c : "Brak informacji"
-            }
+            value={weather.location ? weather.current.feelslike_c : "?"}
             unit={"°"}
           />
           <AirCondition
             icon={faDroplet}
             name="Opady deszczu"
-            value={
-              weather.location ? weather.current.precip_mm : "Brak informacji"
-            }
+            value={weather.location ? weather.current.precip_mm : "?"}
             unit="mm"
           />
         </div>
@@ -34,15 +29,13 @@ export default function AirForecast({ weather }) {
           <AirCondition
             icon={faWind}
             name="Prędkość wiatu"
-            value={
-              weather.location ? weather.current.wind_kph : "Brak informacji"
-            }
+            value={weather.location ? weather.current.wind_kph : "?"}
             unit={"km/h"}
           />
           <AirCondition
             icon={faSun}
             name="Indeks UV"
-            value={weather.location ? weather.current.uv : "Brak informacji"}
+            value={weather.location ? weather.current.uv : "?"}
             unit=""
           />
         </div>

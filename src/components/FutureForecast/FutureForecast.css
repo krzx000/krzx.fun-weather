@@ -1,18 +1,28 @@
 .FutureForecast:not(:last-child) {
-  border-bottom: 2px solid #dfe2e6;
+  border-bottom: 2px solid var(--light-item-separator-border-color);
 }
 
 .FutureForecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .FutureForecast--Status {
-  color: #000;
+  color: var(--light-future-forecast-status-color);
   font-size: 20px;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -22,24 +32,26 @@
   margin-left: 20px;
 }
 .FutureForecast--Day {
-  color: #959ba3;
+  color: var(--light-future-forecast-day-color);
   font-size: 20px;
   font-weight: 700;
 }
 
 .FutureForecast--Temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 20px;
   font-weight: 700;
 }
 
 .FutureForecast--Temperature--Day {
-  color: #000;
+  color: var(--light-future-forecast-temperature-day-color);
 }
 .FutureForecast--Temperature--Separator {
-  color: #989da3;
+  color: var(--light-future-forecast-temperature-separator-color);
   font-weight: 500;
 }
 .FutureForecast--Temperature--Night {
-  color: #9ea4ac;
+  color: var(--light-future-forecast-temperature-night-color);
 }

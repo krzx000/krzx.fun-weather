@@ -17,11 +17,57 @@
   background: #00000060;
 }
 
-body {
+:root {
+  --light-background-color: #f5f5f5;
+  --dark-background-color: #242222;
+
+  --light-filled-panel-background-color: #eaecef;
+  --light-forecast-panel-title-color: #9ea4ac;
+  --light-navigation-background-color: #eaecef;
+
+  --light-page-name-color-active: #202b3b;
+  --light-page-name-color-active-hover: #444d57;
+
+  --light-page-name-color: #737d8a;
+  --light-page-name-color-hover: #8b929c;
+
+  --light-item-separator-border-color: #dfe2e6;
+
+  --light-future-forecast-status-color: #000;
+  --light-future-forecast-day-color: #959ba3;
+
+  --light-future-forecast-temperature-day-color: #000;
+  --light-future-forecast-temperature-separator-color: #959ba3;
+  --light-future-forecast-temperature-night-color: #9ea4ac;
+
+  --light-forecast-hour-color: #959ba3;
+  --light-forecast-temperature-color: #000;
+
+  --light-city-input-color: #727478;
+  --light-city-input-background-color: #eaecef;
+  --light-city-input-border-color: #e0e0e0;
+  --light-city-input-border-error-color: #dd9494;
+
+  --light-city-input-placeholder-color: #9ea4ac;
+
+  --light-city-input-button-color: #797d83;
+  --light-city-input-button-hover-color: #65696e;
+
+  --light-city-input-contianer-background-color: #ffffff90;
+
+  --light-air-condition-label-color: #959ba3;
+  --light-air-condition-value-color: #202b3b;
+
+  --light-actual-forecast-temperature-color: #000;
+  --light-actual-forecast-city-color: #202b3b;
+  --light-actual-forecast-rain-color: #9ea4ac;
+}
+
+Forecast--Air-Condition--Container--Item--Label--Name body {
   font-size: 16px;
   margin: 0;
   padding: 15px;
-  background-color: #f5f5f5;
+  background-color: var(--light-background-color);
 }
 
 * {
@@ -41,11 +87,10 @@ body {
 @media only screen and (max-width: 1400px) {
   .App {
     position: relative;
-    display: inline !important;
-    background-color: blue !important;
+    display: block !important;
   }
   nav {
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--light-city-input-border-color);
     height: -webkit-min-content !important;
     height: -moz-min-content !important;
     height: min-content !important;
@@ -57,6 +102,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute !important;
+    -webkit-box-pack: space-evenly !important;
     justify-content: space-evenly !important;
     -webkit-box-align: center !important;
     -ms-flex-align: center !important;
@@ -72,19 +118,20 @@ body {
 
     width: 100% !important;
   }
+
   .RightSide {
     width: 100% !important;
     margin-top: 30px;
     margin-bottom: 95px;
   }
   .City-Input--Container {
-    border: 0.5px solid #e0e0e0;
+    border: 0.5px solid var(--light-city-input-border-color);
     position: fixed !important;
     padding: 15px;
     width: calc(100% - 30px);
     top: 0;
     left: 0;
-    background: #ffffff90;
+    background: var(--light-city-input-contianer-background-color);
     -webkit-backdrop-filter: blur(71px) !important;
     backdrop-filter: blur(71px) !important;
   }
@@ -106,7 +153,7 @@ section {
   border-radius: 25px;
 }
 .Forecast--Panel.filled {
-  background-color: #eaecef;
+  background-color: var(--light-filled-panel-background-color);
 }
 
 .Forecast--Panel:not(:last-child) {
@@ -117,7 +164,7 @@ section {
   padding: 0;
   margin: 0;
   text-transform: uppercase;
-  color: #9ea4ac;
+  color: var(--light-forecast-panel-title-color);
   font-size: 15px;
   font-weight: 500;
 }
@@ -125,13 +172,13 @@ section {
 .Forecast--Panel h1 {
   padding: 0;
   margin: 0;
-  color: #202b3b;
+  color: var(--light-actual-forecast-city-color);
   font-size: 48px;
   font-weight: 700;
 }
 
 .Forecast--Panel span {
-  color: #9ea4ac;
+  color: var(--light-actual-forecast-rain-color);
   font-size: 16px;
   font-weight: 500;
 }

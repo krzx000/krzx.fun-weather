@@ -1,17 +1,18 @@
 import translateCode from "../../translateCode";
 import "./FutureForecast.css";
+import blank from "../../images/blank.svg";
 
-export default function FutureForecast({ weather, index }) {
-  let dayString = "";
+const getDayString = (weather, index) => {
   const dayNumber = weather.location
     ? new Date(weather.forecast.forecastday[index].date).getDate()
     : new Date().getDate();
+  const today = new Date().getDate();
 
-  if (dayNumber === new Date().getDate() - 1) dayString = "Wczoraj";
-  if (dayNumber === new Date().getDate()) dayString = "Dzisiaj";
-  if (dayNumber === new Date().getDate() + 1) dayString = "Jutro";
-  if (dayNumber > new Date().getDate() + 1)
-    dayString = (
+  if (dayNumber === today - 1) return "Wczoraj";
+  if (dayNumber === today) return "Dzisiaj";
+  if (dayNumber === today + 1) return "Jutro";
+  if (dayNumber > today + 1)
+    return (
       weather.location
         ? new Date(weather.forecast.forecastday[index].date)
         : new Date()
@@ -19,40 +20,47 @@ export default function FutureForecast({ weather, index }) {
       weekday: "long",
     });
 
+  return "";
+};
+
+export default function FutureForecast({ weather, index }) {
+  let dayString = getDayString(weather, index);
+  dayString =
+    dayString.charAt(0).toLocaleUpperCase() +
+    dayString.substring(1, dayString.length);
+
   return (
     <div className="FutureForecast">
       <div className="FutureForecast--Day">{dayString}</div>
       <div className="FutureForecast--Status">
-        {weather.location ? (
-          <img
-            className="FutureForecast--Status--Icon"
-            src={translateCode(weather.forecast.forecastday[index].day)}
-            alt="Ikona prognozy pogody"
-            draggable="false"
-          />
-        ) : null}
+        <img
+          className="FutureForecast--Status--Icon"
+          src={
+            weather.location
+              ? translateCode(weather.forecast.forecastday[index].day)
+              : blank
+          }
+          alt="Ikona prognozy pogody"
+          draggable="false"
+        />
 
         <div className="FutureForecast--Status--Status">
           {weather.location
             ? weather.forecast.forecastday[index].day.condition.text
-            : "Brak informacji"}
+            : "?"}
         </div>
       </div>
       <div className="FutureForecast--Temperature">
         <div className="FutureForecast--Temperature--Day">
-          {Math.round(
-            weather.location
-              ? weather.forecast.forecastday[index].day.maxtemp_c
-              : "Brak informacji"
-          )}
+          {weather.location
+            ? Math.round(weather.forecast.forecastday[index].day.maxtemp_c)
+            : "?"}
         </div>
         <div className="FutureForecast--Temperature--Separator">/</div>
         <div className="FutureForecast--Temperature--Night">
-          {Math.round(
-            weather.location
-              ? weather.forecast.forecastday[index].day.mintemp_c
-              : "Brak informacji"
-          )}
+          {weather.location
+            ? Math.round(weather.forecast.forecastday[index].day.mintemp_c)
+            : "?"}
         </div>
       </div>
     </div>

@@ -1,18 +1,28 @@
 .Page--Icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .Page--Name {
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
   margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-weight: 600;
-  color: #737d8a;
+  color: var(--light-page-name-color);
 }
 .Page--Name.active {
-  color: #202b3b;
+  color: var(--light-page-name-color-active);
 }
 
 .Page {
@@ -28,9 +38,9 @@
 }
 
 .Page:hover .Page--Name {
-  color: #8b929c;
+  color: var(--light-page-name-color-hover);
 }
 
 .Page:hover .Page--Name.active {
-  color: #444d57;
+  color: var(--light-page-name-color-active-hover);
 }

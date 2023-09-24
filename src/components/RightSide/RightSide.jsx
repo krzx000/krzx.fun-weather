@@ -1,5 +1,5 @@
-import "./RightSide.css";
 import FutureForecast from "../FutureForecast/FutureForecast";
+import "./RightSide.css";
 
 export default function RightSide({ weather }) {
   return (
@@ -7,13 +7,9 @@ export default function RightSide({ weather }) {
       <div className="Forecast--Panel filled">
         <h5>PROGNOZA NA 7 DNI</h5>
         <div className="Forecast--Panel--Content">
-          <FutureForecast weather={weather} index={0} />
-          <FutureForecast weather={weather} index={1} />
-          <FutureForecast weather={weather} index={2} />
-          <FutureForecast weather={weather} index={3} />
-          <FutureForecast weather={weather} index={4} />
-          <FutureForecast weather={weather} index={5} />
-          <FutureForecast weather={weather} index={6} />
+          {Array.from({ length: 7 }, (_, index) => (
+            <FutureForecast key={index} weather={weather} index={index} />
+          ))}
         </div>
       </div>
     </section>

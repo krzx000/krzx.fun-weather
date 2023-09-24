@@ -1,8 +1,9 @@
 nav {
-  background-color: #eaecef;
+  background-color: var(--light-navigation-background-color);
   border-radius: 25px;
   padding: 20px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
-
   height: calc(100vh - 70px);
 }

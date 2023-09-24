@@ -10,7 +10,7 @@ export default function AirCondition({ icon, name, value, unit }) {
           {name}
         </div>
         <div className="Forecast--Air-Condition--Container--Item--Value">
-          {Math.round(value) + " " + unit}
+          {value !== "?" ? Math.round(value) + " " + unit : "?"}
         </div>
       </div>
     </div>

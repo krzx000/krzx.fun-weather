@@ -6,7 +6,7 @@ import CityInput from "../CityInput/CityInput";
 export default function LeftSide({ updateWeather, weather }) {
   return (
     <section className="LeftSide">
-      <CityInput updateWeather={updateWeather} />
+      <CityInput updateWeather={updateWeather} weather={weather} />
       <ActualForecast weather={weather} />
       <HourlyForecast weather={weather} />
       <AirForecast weather={weather} />

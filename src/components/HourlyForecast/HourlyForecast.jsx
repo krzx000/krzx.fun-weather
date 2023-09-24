@@ -1,4 +1,3 @@
-import "./HourlyForecast.css";
 import ForecastHour from "../ForecastHour/ForecastHour";
 
 export default function HourlyForecast({ weather }) {

@@ -1,20 +1,30 @@
-import "./Navigation.css";
-import Page from "./Page/Page";
-
 import {
   faCloudSunRain,
   faListUl,
   faMap,
   faSliders,
 } from "@fortawesome/free-solid-svg-icons";
+import Page from "./Page/Page";
+import "./Navigation.css";
+
+const pages = [
+  { icon: faCloudSunRain, name: "Pogoda", active: true },
+  { icon: faListUl, name: "Miasta", active: false },
+  { icon: faMap, name: "Mapa", active: false },
+  { icon: faSliders, name: "Ustawienia", active: false },
+];
 
 export default function Navigation() {
   return (
     <nav>
-      <Page icon={faCloudSunRain} name={"Pogoda"} active={true} />
-      <Page icon={faListUl} name={"Miasta"} active={false} />
-      <Page icon={faMap} name={"Mapa"} active={false} />
-      <Page icon={faSliders} name={"Ustawienia"} active={false} />
+      {pages.map((page) => (
+        <Page
+          key={page.name}
+          icon={page.icon}
+          name={page.name}
+          active={page.active}
+        />
+      ))}
     </nav>
   );
 }
