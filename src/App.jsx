@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-//import { useMediaQuery } from "react-responsive";
 import Navigation from "./components/Navigation/Navigation";
 import RightSide from "./components/RightSide/RightSide";
 import LeftSide from "./components/LeftSide/LeftSide";
@@ -10,15 +9,6 @@ const API_KEY =
 
 export default function App() {
   const [weather, setWeather] = useState({});
-  // const [isDark, setIsDark] = useState(false);
-
-  // const systemPrefersDark = useMediaQuery(
-  //   {
-  //     query: "(prefers-color-scheme: dark)",
-  //   },
-  //   undefined,
-  //   (isSystemDark) => setIsDark(isSystemDark)
-  // );
 
   const updateWeather = async (city) => {
     if (!city) return;

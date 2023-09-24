@@ -63,7 +63,7 @@
   --light-actual-forecast-rain-color: #9ea4ac;
 }
 
-Forecast--Air-Condition--Container--Item--Label--Name body {
+body {
   font-size: 16px;
   margin: 0;
   padding: 15px;
